@@ -9,8 +9,8 @@
   <meta name="description" content="Video conferencia Átomo Soluciones">
 
 
-  <link rel="shortcut icon" href="/demos/logo.png">
-  <link rel="stylesheet" type="text/css" href="/demos/css/emojionearea.min.css">
+  <link rel="shortcut icon" href="/transmition/logo.png">
+  <link rel="stylesheet" type="text/css" href="/transmition/css/emojionearea.min.css">
 
     <!-- Materialized  init -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -22,8 +22,8 @@
     <!-- Materialized  finish -->
 
 
-  <script src="/demos/js/jquery.min.js"></script>
-  <link href="/demos/css/bootstrap.min.css" rel="stylesheet">
+  <script src="/transmition/js/jquery.min.js"></script>
+  <link href="/transmition/css/bootstrap.min.css" rel="stylesheet">
   <script src="/node_modules/webrtc-adapter/out/adapter.js"></script>
   <script src="/dist/RTCMultiConnection.min.js"></script>
   <script src="/socket.io/socket.io.js"></script>
@@ -31,7 +31,7 @@
 
   <script src="/node_modules/canvas-designer/dev/webrtc-handler.js"></script>
   <script src="/node_modules/canvas-designer/canvas-designer-widget.js"></script>
-  <script src="/demos/js/emojionearea.min.js"></script>
+  <script src="/transmition/js/emojionearea.min.js"></script>
 
   <link rel="stylesheet" href="/dev/getHTMLMediaElement.css">
 <script src="/dev/getHTMLMediaElement.js"></script>
@@ -224,21 +224,21 @@ input[disabled], button[disabled] {
 </style>
 
 
-<article style="background-image: url('../fondo.jpeg'); background-size: cover;">
+<article style="background-color: #ffcdd2;">
  <div class="nav" style="height: 100px; margin-bottom: 5px; margin-top:0; margin-left: 15px;">
-      <img src="../liveAtomo.png" style="width: 60px; height: 60px; margin-top: 15px;">  
-     <h4 style="margin-top: 15px; margin-left: 15px; color: white;">Átomo Live<br> <span style="font-size: 15px; color: white;" id="nombreUsuario"></span><span id="rolEnviar" style="font-size: 10px; color: white;"></span></h4>
+      <img src="../liveAtomo.png" style="width: 100px; height: 100px; margin-top: -15px;">  
+     <h4 style="margin-top: 15px; margin-left: 15px; color: black;">Traning Live<br> <span style="font-size: 15px; color: black;" id="nombreUsuario"></span><span id="rolEnviar" style="font-size: 10px; color: black;"></span></h4>
    
    
  </div>   
 
-<div id="widget-container" style="position: fixed;bottom: 0;right: 0;left: 30%;height: 100%; border-top:0; border-bottom: 0; overflow-y: scroll; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); background-image: url('../fondo.jpeg'); background-size: cover; height: 100%;
+<div id="widget-container" style="position: fixed;bottom: 0;right: 0;left: 30%;height: 100%; border-top:0; border-bottom: 0; overflow-y: scroll; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); background-color:#ffcdd2; height: 100%;
    width: 90% ;" ></div>
 <video id="screen-viewer"   playsinline autoplay  >
     
 </video>
 
-<div style="width: 30%; min-height: 100%; position: absolute;left:0; background-image: url('../fondo.jpeg'); background-size: cover;">
+<div style="width: 30%; min-height: 100%; position: absolute;left:0; background-color:#ffcdd2;">
     <video id="main-video"  playsinline  autoplay> </video>
 
 
@@ -246,13 +246,13 @@ input[disabled], button[disabled] {
     
 <div class="row" style="margin-left: 10px;">
 
-       <a class="cuadroNew btn-floating btn-large waves-effect waves-light " id="btnMicroActivo" ><i class="material-icons" onclick="muteAudio();" style="background-color: #007bff;">mic_none</i></a>
+       <a class="cuadroNew btn-floating btn-large waves-effect waves-light " id="btnMicroActivo" ><i class="material-icons" onclick="muteAudio();" style="background-color: black;">mic_none</i></a>
 
       <a class="cuadroNew btn-floating btn-large waves-effect waves-light red"  id="btnMicroInactivo" onclick="activarBtnMicro();" style="display: none;"><i class="material-icons">mic_off</i></a>
 
 
    
-      <a class="cuadroNew btn-floating btn-large waves-effect waves-light " onclick="muteVideo()" id="btnCamaraActivo" style="margin-left: 10px; background-color: #007bff;"><i class="material-icons"  >camera_alt</i></a>
+      <a class="cuadroNew btn-floating btn-large waves-effect waves-light " onclick="muteVideo()" id="btnCamaraActivo" style="margin-left: 10px; background-color:black;"><i class="material-icons"  >camera_alt</i></a>
 
       <a class="cuadroNew btn-floating btn-large waves-effect waves-light red" id="btnCamaraInactivo"  onclick="activarBtnCamara();" style="display: none;margin-left: 10px;" ><i class="material-icons" style="">camera</i></a>
 
@@ -274,7 +274,7 @@ input[disabled], button[disabled] {
          <img src="https://image.flaticon.com/icons/svg/929/929416.svg" id="iconCerrar" class="cardBox cuadroNew" style="width: 30px; height: 30px; margin-top: -60px; position: absolute;   margin-left: 10px; display: none; border-radius: 100px; background-color:#ecf0f1;   " onclick="cerrarListaUsuarios();"> 
     </div><br>
 
-          <a class="cuadroNew btn-floating btn-large waves-effect waves-light tooltipped " data-position="bottom" data-delay="50" data-tooltip="Usuarios"   style="display: block;margin-left: 10px;  background-color: #007bff; margin-top: -50px;" title="Usuario" onclick="mostrarListaUsuarios();" ><i class="material-icons" style="">group</i></a>
+          <a class="cuadroNew btn-floating btn-large waves-effect waves-light tooltipped " data-position="bottom" data-delay="50" data-tooltip="Usuarios"   style="display: block;margin-left: 10px;  background-color: black; margin-top: -50px;" title="Usuario" onclick="mostrarListaUsuarios();" ><i class="material-icons" style="">group</i></a>
          
 
 
@@ -295,7 +295,7 @@ input[disabled], button[disabled] {
     </script>
 
 
-    <div style="margin-top: 20px; margin-left: 20px; position: relative; bottom: 0;background: white; padding-bottom: 20px; width: 85%; background-image: url('../fondo.jpeg'); background-size: cover;">
+    <div style="margin-top: 20px; margin-left: 20px; position: relative; bottom: 0;background: white; padding-bottom: 20px; width: 85%; background-color:#ffcdd2;">
         <div id="conversation-panel"></div>
         <div id="key-press" style="text-align: right; display: none; font-size: 11px;">
             <span style="vertical-align: middle;"></span>
@@ -304,14 +304,14 @@ input[disabled], button[disabled] {
         <textarea id="txt-chat-message" placeholder="Mensaje para el grupo"></textarea>
 
          <div class="row">
-        <button class="col s2 m2 l2 btn waves-effect waves-light" style="background-color: rgb(61, 90, 254);" id="btn-chat-message" type="submit" name="action" disabled>Enviar Mensaje
+        <button class="col s2 m2 l2 btn waves-effect waves-light" style="background-color:black;" id="btn-chat-message" type="submit" name="action" disabled>Enviar Mensaje
         <i class="material-icons right">send</i>
         </button>
 
        
         <div style="margin-top: 10px;">
-        <a  id="btn-attach-file" class="cuadroNew btn-floating btn-small waves-effect waves-light orange" id="btnMicroActivo" ><i class="material-icons">attach_file</i></a>
-        <a id="btn-share-screen" class="cuadroNew btn-floating btn-small waves-effect waves-light orange" id="btnMicroActivo" ><i class="material-icons">screen_share</i></a>
+        <a  id="btn-attach-file" class="cuadroNew btn-floating btn-small waves-effect waves-light " style="background-color: #007bff;" id="btnMicroActivo" ><i class="material-icons">attach_file</i></a>
+        <a id="btn-share-screen" class="cuadroNew btn-floating btn-small waves-effect waves-light " style="background-color: #007bff;" id="btnMicroActivo" ><i class="material-icons">screen_share</i></a>
         </div>
         </div>
 
@@ -795,7 +795,7 @@ connection.onstream = function(event) {
 
            if (event.userid === connection.userid) {
         
-           $('<div class="row" style="margin-left:10px;"><a class="cuadroNew btn-floating btn-small waves-effect waves-light " id="audioActivo'+event.streamid+'" ><i class="material-icons" onclick="desactivarAudioAlumnos(\''+event.streamid+'\');"  style="background-color: #007bff;">mic_none</i></a><a class="cuadroNew btn-floating btn-small waves-effect waves-light red" onclick="activarAudioAlumnos(\''+event.streamid+'\');"   id="audioInactivo'+event.streamid+'" onclick="activarBtnMicro();" style="display: none;"><i class="material-icons">mic_off</i></a><a class="cuadroNew btn-floating btn-small waves-effect waves-light " onclick="desactivarVideoAlumnos(\''+event.streamid+'\');" id="videoActivo'+event.streamid+'" style="margin-left: 10px; background-color: #007bff;"><i class="material-icons"  >camera_alt</i></a><a class="cuadroNew btn-floating btn-small waves-effect waves-light red" id="videoInactivo'+event.streamid+'"  onclick="activarVideoAlumnos(\''+event.streamid+'\');" style="display: none;margin-left: 10px;" ><i class="material-icons" style="">camera</i></a></div>').appendTo( '#controlsIndividual'+event.streamid);
+           $('<div class="row" style="margin-left:10px;"><a class="cuadroNew btn-floating btn-small waves-effect waves-light " id="audioActivo'+event.streamid+'" ><i class="material-icons" onclick="desactivarAudioAlumnos(\''+event.streamid+'\');"  style="background-color: black;">mic_none</i></a><a class="cuadroNew btn-floating btn-small waves-effect waves-light red" onclick="activarAudioAlumnos(\''+event.streamid+'\');"   id="audioInactivo'+event.streamid+'" onclick="activarBtnMicro();" style="display: none;"><i class="material-icons">mic_off</i></a><a class="cuadroNew btn-floating btn-small waves-effect waves-light " onclick="desactivarVideoAlumnos(\''+event.streamid+'\');" id="videoActivo'+event.streamid+'" style="margin-left: 10px; background-color: black;"><i class="material-icons"  >camera_alt</i></a><a class="cuadroNew btn-floating btn-small waves-effect waves-light red" id="videoInactivo'+event.streamid+'"  onclick="activarVideoAlumnos(\''+event.streamid+'\');" style="display: none;margin-left: 10px;" ><i class="material-icons" style="">camera</i></a></div>').appendTo( '#controlsIndividual'+event.streamid);
 
       
         //$( '<div class="cuadroNew cardBox"  onclick="desactivarAudioAlumnos(\''+event.streamid+'\');"  style="border-radius:50px; background-color: white; width: 30px;"  ><img src="https://image.flaticon.com/icons/svg/3163/3163456.svg" width="30" height="30"  ></div>' ).appendTo( '#other-videos' );
